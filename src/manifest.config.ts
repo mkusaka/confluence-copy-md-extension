@@ -5,7 +5,7 @@ export default defineManifest({
   manifest_version: 3,
   name: 'Confluence Copy Helper',
   version: '0.1.0',
-  description: 'Confluence ページをワンクリックで Markdown に変換してコピー',
+  description: 'Convert Confluence pages to Markdown with a single click',
   permissions: ['clipboardWrite', 'activeTab', 'scripting'],
   host_permissions: ['https://*.atlassian.net/*'],
   background: { service_worker: 'src/background.ts' },
