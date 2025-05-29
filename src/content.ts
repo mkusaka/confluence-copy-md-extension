@@ -6,12 +6,46 @@ function extractPageId(path: string): string | null {
   return m?.[1] ?? null
 }
 
+function showToast(message: string) {
+  // Remove existing toast if any
+  const existingToast = document.getElementById('confluence-copy-toast')
+  if (existingToast) {
+    existingToast.remove()
+  }
+
+  // Create toast element
+  const toast = document.createElement('div')
+  toast.id = 'confluence-copy-toast'
+  toast.textContent = message
+  toast.style.cssText = `
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #333;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 4px;
+    font-size: 14px;
+    z-index: 10000;
+    transition: opacity 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  `
+  
+  document.body.appendChild(toast)
+  
+  // Fade out and remove after 3 seconds
+  setTimeout(() => {
+    toast.style.opacity = '0'
+    setTimeout(() => toast.remove(), 300)
+  }, 3000)
+}
+
 async function copyPageAsMd() {
   console.log('copyPageAsMd called')
   const pageId = extractPageId(location.pathname)
   console.log('Page ID:', pageId, 'Path:', location.pathname)
   if (!pageId) {
-    alert('Page ID が取得できません')
+    showToast('❌ Page ID が取得できません')
     return
   }
   
@@ -25,7 +59,7 @@ async function copyPageAsMd() {
     
     if (!res.ok) {
       console.error('API Error:', res.status, res.statusText)
-      alert(`API Error: ${res.status}`)
+      showToast(`❌ API Error: ${res.status}`)
       return
     }
     
@@ -36,7 +70,7 @@ async function copyPageAsMd() {
     const adf = json.body?.atlas_doc_format?.value
     if (!adf) {
       console.error('ADF not found in response:', json)
-      alert('ADF形式のデータが取得できませんでした')
+      showToast('❌ ADF形式のデータが取得できませんでした')
       return
     }
     
@@ -55,10 +89,10 @@ async function copyPageAsMd() {
     document.execCommand('copy')
     document.body.removeChild(textarea)
     
-    alert('Markdown をコピーしました 🎉')
+    showToast('Markdown をコピーしました 🎉')
   } catch (error) {
     console.error('Error:', error)
-    alert(`エラーが発生しました: ${error}`)
+    showToast(`❌ エラーが発生しました: ${error}`)
   }
 }
 
