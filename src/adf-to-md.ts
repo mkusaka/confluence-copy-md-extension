@@ -3,24 +3,35 @@ import { toMarkdown } from 'mdast-util-to-markdown'
 import type { Root as MdastRoot } from 'mdast'
 import type { DocNode } from '@atlaskit/adf-schema'
 
+interface ADFNode {
+  type: string
+  content?: ADFNode[]
+  attrs?: Record<string, unknown>
+  marks?: Array<{
+    type: string
+    attrs?: Record<string, unknown>
+  }>
+  text?: string
+}
+
 /**
  * Filter out extension nodes from ADF content recursively
  */
-function filterExtensionNodes(node: any): any {
+function filterExtensionNodes<T extends ADFNode | null>(node: T): T {
   if (!node) return node
   
   // Skip extension-related nodes
   if (node.type === 'extension' || 
       node.type === 'bodiedExtension' || 
       node.type === 'inlineExtension') {
-    return null
+    return null as T
   }
   
   // Process content array if exists
   if (node.content && Array.isArray(node.content)) {
     node.content = node.content
       .map(child => filterExtensionNodes(child))
-      .filter(child => child !== null)
+      .filter((child): child is ADFNode => child !== null)
   }
   
   return node
