@@ -17,6 +17,11 @@ export default defineManifest({
     }
   ],
   action: {
-    default_title: 'Copy as Markdown'
+    default_title: 'Copy as Markdown',
+    default_icon: {
+      16: 'icons/icon16.png',
+      48: 'icons/icon48.png',
+      128: 'icons/icon128.png'
+    }
   }
 })
