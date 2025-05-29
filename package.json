@@ -5,7 +5,8 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build"
+    "build": "vite build",
+    "package": "pnpm build && mkdir -p dist-package && cp -r dist/* dist-package/ && cp manifest.json dist-package/ && cp -r public/icons dist-package/ && cd dist-package && zip -r ../chrome-extension.zip . && cd .. && rm -rf dist-package"
   },
   "dependencies": {
     "mdast-util-from-adf": "^2.1.1",
