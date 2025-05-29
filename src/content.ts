@@ -45,7 +45,7 @@ async function copyPageAsMd() {
   const pageId = extractPageId(location.pathname)
   console.log('Page ID:', pageId, 'Path:', location.pathname)
   if (!pageId) {
-    showToast('❌ Page ID が取得できません')
+    showToast('❌ Could not retrieve Page ID')
     return
   }
   
@@ -70,7 +70,7 @@ async function copyPageAsMd() {
     const adf = json.body?.atlas_doc_format?.value
     if (!adf) {
       console.error('ADF not found in response:', json)
-      showToast('❌ ADF形式のデータが取得できませんでした')
+      showToast('❌ Could not retrieve ADF format data')
       return
     }
     
@@ -89,14 +89,14 @@ async function copyPageAsMd() {
     document.execCommand('copy')
     document.body.removeChild(textarea)
     
-    showToast('Markdown をコピーしました 🎉')
+    showToast('Copied as Markdown 🎉')
   } catch (error) {
     console.error('Error:', error)
-    showToast(`❌ エラーが発生しました: ${error}`)
+    showToast(`❌ An error occurred: ${error}`)
   }
 }
 
-// background からのメッセージ受信
+// Receive messages from background script
 chrome.runtime.onMessage.addListener((msg: any, sender: any, sendResponse: any) => {
   console.log('Message received:', msg)
   if (msg === 'COPY_CONFLUENCE_MD') {
