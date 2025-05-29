@@ -1,10 +1,11 @@
 // src/manifest.config.ts
 import { defineManifest } from '@crxjs/vite-plugin'
+import packageJson from '../package.json'
 
 export default defineManifest({
   manifest_version: 3,
   name: 'Confluence Copy Helper',
-  version: '0.1.0',
+  version: packageJson.version,
   description: 'Convert Confluence pages to Markdown with a single click',
   permissions: ['clipboardWrite', 'activeTab', 'scripting'],
   host_permissions: ['https://*.atlassian.net/*'],
