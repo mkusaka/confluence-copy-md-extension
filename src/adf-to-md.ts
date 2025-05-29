@@ -4,12 +4,38 @@ import type { Root as MdastRoot } from 'mdast'
 import type { DocNode } from '@atlaskit/adf-schema'
 
 /**
+ * Filter out extension nodes from ADF content recursively
+ */
+function filterExtensionNodes(node: any): any {
+  if (!node) return node
+  
+  // Skip extension-related nodes
+  if (node.type === 'extension' || 
+      node.type === 'bodiedExtension' || 
+      node.type === 'inlineExtension') {
+    return null
+  }
+  
+  // Process content array if exists
+  if (node.content && Array.isArray(node.content)) {
+    node.content = node.content
+      .map(child => filterExtensionNodes(child))
+      .filter(child => child !== null)
+  }
+  
+  return node
+}
+
+/**
  * Confluence の ADF(JSON) を Markdown 文字列に変換して返す
  * @param adf - Confluence から取ってきた ADF JSON
  */
 export function adfToMarkdown(adf: DocNode): string {
+  // Filter out extension nodes before conversion
+  const filteredAdf = filterExtensionNodes(JSON.parse(JSON.stringify(adf)))
+  
   // ADF→mdast AST
-  const mdastRoot = fromADF(adf) as MdastRoot
+  const mdastRoot = fromADF(filteredAdf) as MdastRoot
   // mdast AST→Markdown
   let markdown = toMarkdown(mdastRoot, {
     bullet: '-',   // リストは `- `
