@@ -5,6 +5,8 @@ import { stringify as stringifyYaml } from "yaml";
 import type { Root as MdastRoot } from "mdast";
 import type { DocNode } from "@atlaskit/adf-schema";
 
+type FromAdfDoc = Parameters<typeof fromADF>[0];
+
 interface ADFNode {
   type: string;
   content?: ADFNode[];
@@ -168,7 +170,7 @@ export function confluencePageMetadata(page: ConfluencePageResponse): MarkdownMe
  * @param adf - Confluence から取ってきた ADF JSON
  */
 export function adfToMarkdown(adf: DocNode, metadata?: MarkdownMetadata): string {
-  const normalizedAdf = normalizeUnsupportedNodes(JSON.parse(JSON.stringify(adf))) as DocNode;
+  const normalizedAdf = normalizeUnsupportedNodes(JSON.parse(JSON.stringify(adf))) as FromAdfDoc;
 
   // ADF→mdast AST
   const mdastRoot = fromADF(normalizedAdf) as MdastRoot;

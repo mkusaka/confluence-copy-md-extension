@@ -4,9 +4,10 @@
     "module": "ESNext",
     "lib": ["ES2020", "DOM"],
     "strict": true,
-    "moduleResolution": "Node",
+    "moduleResolution": "Bundler",
     "esModuleInterop": true,
     "resolveJsonModule": true,
+    "types": ["chrome", "vite/client"],
     "skipLibCheck": true,
     "outDir": "dist"
   },
