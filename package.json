@@ -1,6 +1,7 @@
 {
   "name": "confluence-copy-helper",
   "version": "0.4.1",
+  "packageManager": "pnpm@11.2.2",
   "private": true,
   "type": "module",
   "scripts": {
