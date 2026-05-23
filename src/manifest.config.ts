@@ -10,6 +10,12 @@ export default defineManifest({
   permissions: ['clipboardWrite', 'activeTab', 'scripting'],
   host_permissions: ['https://*.atlassian.net/*'],
   background: { service_worker: 'src/background.ts' },
+  icons: {
+    16: 'icons/icon16.png',
+    32: 'icons/icon32.png',
+    48: 'icons/icon48.png',
+    128: 'icons/icon128.png'
+  },
   content_scripts: [
     {
       matches: ['https://*.atlassian.net/wiki/*'],
@@ -21,6 +27,7 @@ export default defineManifest({
     default_title: 'Copy as Markdown',
     default_icon: {
       16: 'icons/icon16.png',
+      32: 'icons/icon32.png',
       48: 'icons/icon48.png',
       128: 'icons/icon128.png'
     }

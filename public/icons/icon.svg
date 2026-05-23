@@ -1,4 +1,13 @@
-<svg width="128" height="128" xmlns="http://www.w3.org/2000/svg">
-  <rect width="128" height="128" rx="16" fill="#0052CC"/>
-  <text x="64" y="72" font-family="Arial" font-size="48" font-weight="bold" text-anchor="middle" fill="white">MD</text>
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128" role="img" aria-label="Confluence Copy Markdown icon">
+  <rect width="128" height="128" rx="28" fill="#0c66e4"/>
+  <rect x="20" y="18" width="68" height="84" rx="12" fill="#ffffff"/>
+  <path d="M72 18v21a7 7 0 0 0 7 7h9" fill="#deebff"/>
+  <rect x="38" y="41" width="30" height="7" rx="3.5" fill="#172b4d"/>
+  <rect x="38" y="57" width="32" height="7" rx="3.5" fill="#172b4d"/>
+  <rect x="38" y="73" width="20" height="7" rx="3.5" fill="#172b4d"/>
+  <rect x="59" y="52" width="47" height="56" rx="10" fill="#36b37e"/>
+  <path d="M68 52h29v10H68z" fill="#ffffff" opacity=".95"/>
+  <rect x="72" y="73" width="21" height="6" rx="3" fill="#ffffff"/>
+  <rect x="72" y="87" width="15" height="6" rx="3" fill="#ffffff"/>
+  <polygon points="92 82 101 90 92 98" fill="#ffffff"/>
 </svg>
