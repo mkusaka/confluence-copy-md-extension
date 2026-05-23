@@ -1,8 +1,64 @@
 import { describe, expect, it } from 'vitest'
 import type { DocNode } from '@atlaskit/adf-schema'
-import { adfToMarkdown } from './adf-to-md'
+import { adfToMarkdown, confluencePageMetadata } from './adf-to-md'
 
 describe('adfToMarkdown', () => {
+  it('prepends page metadata as YAML frontmatter', () => {
+    const metadata = confluencePageMetadata({
+      title: 'Example Page',
+      id: '123456',
+      spaceId: '654321',
+      status: 'current',
+      parentType: 'page',
+      parentId: '111111',
+      createdAt: '2026-01-01T00:00:00.000Z',
+      version: {
+        number: 3,
+        createdAt: '2026-01-02T00:00:00.000Z'
+      },
+      _links: {
+        base: 'https://example.atlassian.net/wiki',
+        webui: '/spaces/EX/pages/123456/Example+Page',
+        editui: '/pages/resumedraft.action?draftId=123456',
+        tinyui: '/x/example'
+      }
+    })
+
+    const markdown = adfToMarkdown({
+      type: 'doc',
+      version: 1,
+      content: [
+        {
+          type: 'paragraph',
+          content: [{ type: 'text', text: 'Body text' }]
+        }
+      ]
+    } as unknown as DocNode, metadata)
+
+    expect(markdown).toContain('title: "Example Page"')
+    expect(markdown).toContain('id: "123456"')
+    expect(markdown).toContain('version: 3')
+    expect(markdown).toContain('url: "https://example.atlassian.net/wiki/spaces/EX/pages/123456/Example+Page"')
+    expect(markdown).toContain('editUrl: "https://example.atlassian.net/wiki/pages/resumedraft.action?draftId=123456"')
+    expect(markdown).toContain('tinyUrl: "https://example.atlassian.net/wiki/x/example"')
+    expect(markdown).toMatch(/^---\n[\s\S]+?\n---\n\nBody text\n$/)
+  })
+
+  it('does not prepend YAML frontmatter without metadata', () => {
+    const markdown = adfToMarkdown({
+      type: 'doc',
+      version: 1,
+      content: [
+        {
+          type: 'paragraph',
+          content: [{ type: 'text', text: 'Body text' }]
+        }
+      ]
+    } as unknown as DocNode)
+
+    expect(markdown).toBe('Body text\n')
+  })
+
   it('converts status nodes to plain text', () => {
     const markdown = adfToMarkdown({
       type: 'doc',

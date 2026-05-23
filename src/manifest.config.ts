@@ -7,7 +7,7 @@ export default defineManifest({
   name: 'Confluence Copy Helper',
   version: packageJson.version,
   description: 'Convert Confluence pages to Markdown with a single click',
-  permissions: ['clipboardWrite', 'activeTab', 'scripting'],
+  permissions: ['clipboardWrite', 'activeTab', 'scripting', 'storage'],
   host_permissions: ['https://*.atlassian.net/*'],
   background: { service_worker: 'src/background.ts' },
   icons: {
@@ -31,5 +31,9 @@ export default defineManifest({
       48: 'icons/icon48.png',
       128: 'icons/icon128.png'
     }
+  },
+  options_ui: {
+    page: 'options.html',
+    open_in_tab: false
   }
 })

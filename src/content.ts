@@ -1,5 +1,6 @@
 // src/content.ts
-import { adfToMarkdown } from './adf-to-md'
+import { adfToMarkdown, confluencePageMetadata } from './adf-to-md'
+import { loadSettings } from './settings'
 
 function extractPageId(path: string): string | null {
   const m = path.match(/\/pages\/(\d+)/)
@@ -77,7 +78,9 @@ async function copyPageAsMd() {
     const adfData = typeof adf === 'string' ? JSON.parse(adf) : adf
     console.log('ADF Data:', adfData)
     
-    const md = adfToMarkdown(adfData)
+    const settings = await loadSettings()
+    const metadata = settings.includeFrontmatter ? confluencePageMetadata(json) : undefined
+    const md = adfToMarkdown(adfData, metadata)
     
     // Create a textarea element to copy text
     const textarea = document.createElement('textarea')
