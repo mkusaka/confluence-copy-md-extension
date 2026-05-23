@@ -1,0 +1,4 @@
+interface:
+  display_name: "Release Confluence Copy Extension"
+  short_description: "Release the Confluence copy Chrome extension"
+  default_prompt: "Use $release-confluence-copy-md-extension to release a new version of this repository."
