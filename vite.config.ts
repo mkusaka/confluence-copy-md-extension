@@ -8,6 +8,7 @@ export default defineConfig({
   build: {
     outDir: 'dist',
     emptyOutDir: true,
+    sourcemap: 'inline',
     rollupOptions: {
       input: {
         background: 'src/background.ts',
