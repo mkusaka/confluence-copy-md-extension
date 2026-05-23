@@ -26,7 +26,7 @@ Use this skill to release `mkusaka/confluence-copy-md-extension` end to end. The
 - `pnpm package` runs `pnpm build`, zips the `dist/` contents, and writes `chrome-extension.zip`.
 - `.github/workflows/release.yml` runs only on pushed tags matching `v*`.
 - The release workflow installs dependencies, runs `pnpm package`, and creates or updates a GitHub Release asset named `chrome-extension.zip`.
-- `dist/` is ignored. `chrome-extension.zip` is tracked historically, but the workflow rebuilds it from the tag; avoid staging a regenerated zip for a normal version-only release unless there is a deliberate reason.
+- `dist/` and `chrome-extension.zip` are ignored. The workflow rebuilds the zip from the tag; do not stage generated release archives.
 - As of 2026-05-24, `v0.4.1` existed as a tag but its release workflow had failed and no GitHub Release existed for it; the latest successful GitHub Release was `v0.4.0`. Treat this as stale context and re-check live state before acting.
 
 ## Release Workflow
@@ -42,7 +42,6 @@ Use this skill to release `mkusaka/confluence-copy-md-extension` end to end. The
    ```
 
 2. Choose the next version:
-
    - Prefer the next patch version from the highest released/tagged version unless the user requests minor or major.
    - If a tag exists but its GitHub Release failed, do not overwrite or move the tag by default. Prefer a new patch version unless the user explicitly wants to repair the existing tag.
    - Keep `package.json` version and tag aligned, e.g. `0.4.2` and `v0.4.2`.
@@ -66,7 +65,7 @@ Use this skill to release `mkusaka/confluence-copy-md-extension` end to end. The
    unzip -p chrome-extension.zip manifest.json
    ```
 
-   Confirm the zipped `manifest.json` version matches `package.json`. After packaging, inspect `git status`; do not automatically stage `chrome-extension.zip`.
+   Confirm the zipped `manifest.json` version matches `package.json`. After packaging, inspect `git status`; `chrome-extension.zip` should remain ignored.
 
 5. Commit and push:
 
@@ -102,7 +101,6 @@ Use this skill to release `mkusaka/confluence-copy-md-extension` end to end. The
    ```
 
 9. If the Chrome Web Store needs to be updated, hand off the GitHub Release asset:
-
    - Download or use the `chrome-extension.zip` attached to the GitHub Release.
    - Upload it to the existing Chrome Web Store item in the Developer Dashboard.
    - Submit for review.
@@ -118,7 +116,7 @@ Use this skill to release `mkusaka/confluence-copy-md-extension` end to end. The
   gh run view <run-id> --repo mkusaka/confluence-copy-md-extension --log-failed
   ```
 
-- If `pnpm package` changes `chrome-extension.zip`, treat that as a verification artifact first. Stage it only if the user wants the checked-in zip refreshed.
+- If `pnpm package` changes `chrome-extension.zip`, treat that as an ignored verification artifact.
 - If Chrome rejects the package, verify the built `manifest.json` version and Chrome extension version syntax against current Chrome documentation.
 
 ## Final Report
@@ -129,4 +127,4 @@ Report:
 - The GitHub Release URL and whether `chrome-extension.zip` is attached.
 - The release workflow run result.
 - Whether Chrome Web Store publication was performed, handed off, or intentionally not touched.
-- Any files intentionally left unstaged, especially `chrome-extension.zip` or `dist/`.
+- Any files intentionally left unstaged or ignored, especially `chrome-extension.zip` or `dist/`.

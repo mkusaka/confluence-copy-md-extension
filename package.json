@@ -10,7 +10,7 @@
     "format:check": "oxfmt --check",
     "lint": "oxlint src vite.config.ts",
     "test": "vitest run",
-    "package": "pnpm build && cd dist && zip -r ../chrome-extension.zip ."
+    "package": "rm -f chrome-extension.zip && pnpm build && cd dist && zip -r ../chrome-extension.zip ."
   },
   "dependencies": {
     "mdast-util-from-adf": "^2.1.1",
