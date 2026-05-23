@@ -101,6 +101,63 @@ describe('adfToMarkdown', () => {
     expect(markdown).toContain('| Example | 42    |')
   })
 
+  it('converts strike marks to GFM strikethrough', () => {
+    const markdown = adfToMarkdown({
+      type: 'doc',
+      version: 1,
+      content: [
+        {
+          type: 'paragraph',
+          content: [
+            { type: 'text', text: 'Keep ' },
+            {
+              type: 'text',
+              text: 'old value',
+              marks: [{ type: 'strike' }]
+            },
+            { type: 'text', text: ' updated value' }
+          ]
+        }
+      ]
+    } as unknown as DocNode)
+
+    expect(markdown).toContain('Keep ~~old value~~ updated value')
+  })
+
+  it('converts task items to GFM task list items', () => {
+    const markdown = adfToMarkdown({
+      type: 'doc',
+      version: 1,
+      content: [
+        {
+          type: 'taskList',
+          attrs: { localId: 'example-task-list' },
+          content: [
+            {
+              type: 'taskItem',
+              attrs: {
+                localId: 'example-task-1',
+                state: 'DONE'
+              },
+              content: [{ type: 'text', text: 'Done item' }]
+            },
+            {
+              type: 'taskItem',
+              attrs: {
+                localId: 'example-task-2',
+                state: 'TODO'
+              },
+              content: [{ type: 'text', text: 'Todo item' }]
+            }
+          ]
+        }
+      ]
+    } as unknown as DocNode)
+
+    expect(markdown).toContain('- [x] Done item')
+    expect(markdown).toContain('- [ ] Todo item')
+  })
+
   it('removes extension nodes before conversion', () => {
     const markdown = adfToMarkdown({
       type: 'doc',

@@ -1,5 +1,5 @@
 import { fromADF } from 'mdast-util-from-adf'
-import { gfmTableToMarkdown } from 'mdast-util-gfm-table'
+import { gfmToMarkdown } from 'mdast-util-gfm'
 import { toMarkdown } from 'mdast-util-to-markdown'
 import type { Root as MdastRoot } from 'mdast'
 import type { DocNode } from '@atlaskit/adf-schema'
@@ -62,7 +62,7 @@ export function adfToMarkdown(adf: DocNode): string {
   // mdast AST→Markdown
   let markdown = toMarkdown(mdastRoot, {
     bullet: '-',   // リストは `- `
-    extensions: [gfmTableToMarkdown()],
+    extensions: [gfmToMarkdown()],
     fences: true,  // ```付きコードブロック
     rule: '-'      // 水平線は `---`
   })
