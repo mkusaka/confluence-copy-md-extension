@@ -1,26 +1,25 @@
 {
-    "manifest_version": 3,
-    "name": "Confluence Copy Helper",
-    "version": "0.1.0",
-    "description": "Convert Confluence pages to Markdown with a single click",
-    "permissions": ["clipboardWrite", "activeTab"],
-    "host_permissions": ["https://*.atlassian.net/*"],
-    "background": {
-      "service_worker": "background.js"
-    },
-    "content_scripts": [
-      {
-        "matches": ["https://*.atlassian.net/wiki/*"],
-        "js": ["content.js"],
-        "run_at": "document_idle"
-      }
-    ],
-    "action": {
-      "default_icon": {
-        "16": "icons/icon16.png",
-        "48": "icons/icon48.png",
-        "128": "icons/icon128.png"
-      }
+  "manifest_version": 3,
+  "name": "Confluence Copy Helper",
+  "version": "0.1.0",
+  "description": "Convert Confluence pages to Markdown with a single click",
+  "permissions": ["clipboardWrite", "activeTab"],
+  "host_permissions": ["https://*.atlassian.net/*"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://*.atlassian.net/wiki/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "action": {
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
     }
   }
-  
+}

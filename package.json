@@ -1,12 +1,14 @@
 {
   "name": "confluence-copy-helper",
   "version": "0.4.1",
-  "packageManager": "pnpm@11.2.2",
   "private": true,
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
+    "format": "oxfmt",
+    "format:check": "oxfmt --check",
+    "lint": "oxlint src vite.config.ts",
     "test": "vitest run",
     "package": "pnpm build && cd dist && zip -r ../chrome-extension.zip ."
   },
@@ -23,8 +25,11 @@
     "@crxjs/vite-plugin": "2.0.0-beta.33",
     "@types/chrome": "0.0.323",
     "@types/mdast": "4.0.4",
+    "oxfmt": "0.51.0",
+    "oxlint": "1.66.0",
     "typescript": "5.7.3",
     "vite": "6.3.5",
     "vitest": "4.1.7"
-  }
+  },
+  "packageManager": "pnpm@11.2.2"
 }

@@ -14,17 +14,20 @@ A Chrome extension that converts Confluence pages to Markdown format with a sing
 ### From Source
 
 1. Clone this repository:
+
    ```bash
    git clone https://github.com/mkusaka/confluence-copy-md-extension.git
    cd confluence-copy-md-extension
    ```
 
 2. Install dependencies:
+
    ```bash
    pnpm install
    ```
 
 3. Build the extension:
+
    ```bash
    pnpm run build
    ```
@@ -45,6 +48,7 @@ A Chrome extension that converts Confluence pages to Markdown format with a sing
 ## Development
 
 This project uses:
+
 - TypeScript
 - Vite with CRXJS plugin for Chrome extension development
 - mdast-util-from-adf for ADF to Markdown conversion
@@ -84,6 +88,7 @@ pnpm run dev
 ## Permissions
 
 The extension requires the following permissions:
+
 - `clipboardWrite`: To copy the converted Markdown to your clipboard
 - `activeTab`: To interact with the current Confluence page
 - `scripting`: To inject content scripts when needed
@@ -100,15 +105,18 @@ Pull requests are welcome! For major changes, please open an issue first to disc
 ## Troubleshooting
 
 ### "Page ID not found" error
+
 - Make sure you're on a Confluence page (URL should contain `/wiki/spaces/` or `/wiki/pages/`)
 - The extension only works on Confluence Cloud instances
 
-### "API Error" 
+### "API Error"
+
 - Check if you're logged in to Confluence
 - Verify you have permission to view the page
 - Some pages might have restrictions that prevent API access
 
 ### Extension icon doesn't appear
+
 - Make sure the extension is enabled in Chrome
 - Try reloading the extension from `chrome://extensions/`
 - Check that you've built the project (`pnpm run build`)
