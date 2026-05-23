@@ -10,7 +10,7 @@ importers:
     dependencies:
       mdast-util-from-adf:
         specifier: ^2.1.1
-        version: 2.1.1(react@18.3.1)
+        version: 2.2.0(react@18.3.1)
       mdast-util-gfm:
         specifier: ^3.1.0
         version: 3.1.0
@@ -717,8 +717,8 @@ packages:
   mdast-util-find-and-replace@3.0.2:
     resolution: {integrity: sha512-Tmd1Vg/m3Xz43afeNxDIhWRtFZgM2VLyaf4vSTYwudTyeuTneoL3qtWMA5jeLyz/O1vDJmmV4QuScFCA2tBPwg==}
 
-  mdast-util-from-adf@2.1.1:
-    resolution: {integrity: sha512-Ix4uzX6445GtuwpS7AxIoTYUPOgH8WAqkKTr4lB81vPvUcHNFfJjIFteFZLE1fk86jdtryr5aR4/68FCLUCpAA==}
+  mdast-util-from-adf@2.2.0:
+    resolution: {integrity: sha512-aA7fHz61+E43sXqPeUrfTMUjn1K2OQ9R5AKhDtZQBTVeY5I73+KCSpwV3yZncHtHNYciETxh9+l1X2jUc4F1FA==}
 
   mdast-util-from-markdown@2.0.3:
     resolution: {integrity: sha512-W4mAWTvSlKvf8L6J+VN9yLSqQ9AOAAvHuoDAmPkz4dHf553m5gVj2ejadHJhoJmcmxEnOv6Pa8XJhpxE93kb8Q==}
@@ -1831,10 +1831,10 @@ snapshots:
       unist-util-is: 6.0.0
       unist-util-visit-parents: 6.0.1
 
-  mdast-util-from-adf@2.1.1(react@18.3.1):
+  mdast-util-from-adf@2.2.0(react@18.3.1):
     dependencies:
       '@atlaskit/adf-schema': 24.0.0(react@18.3.1)
-      '@types/mdast': 3.0.15
+      '@types/mdast': 4.0.4
       unist-builder: 3.0.1
     transitivePeerDependencies:
       - react
