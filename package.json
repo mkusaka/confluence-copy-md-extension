@@ -18,12 +18,12 @@
     "yaml": "^2.9.0"
   },
   "devDependencies": {
-    "@atlaskit/adf-schema": "^24.0.0",
-    "@crxjs/vite-plugin": "^2.0.0-beta.32",
-    "@types/chrome": "^0.0.323",
-    "@types/mdast": "^4.0.4",
-    "typescript": "~5.7.2",
-    "vite": "^6.3.1",
-    "vitest": "^4.1.7"
+    "@atlaskit/adf-schema": "24.0.0",
+    "@crxjs/vite-plugin": "2.0.0-beta.33",
+    "@types/chrome": "0.0.323",
+    "@types/mdast": "4.0.4",
+    "typescript": "5.7.3",
+    "vite": "6.3.5",
+    "vitest": "4.1.7"
   }
 }
