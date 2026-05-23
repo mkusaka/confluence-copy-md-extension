@@ -4,6 +4,7 @@
     "config:best-practices",
     "group:definitelyTyped",
   ],
+  platformAutomerge: false,
   packageRules: [
     {
       description: "Group minor and patch updates for dev dependencies",
