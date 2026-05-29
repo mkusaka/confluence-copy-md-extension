@@ -28,8 +28,8 @@ importers:
         version: 2.9.0
     devDependencies:
       '@atlaskit/adf-schema':
-        specifier: 52.13.0
-        version: 52.13.0(react@18.3.1)
+        specifier: 52.13.1
+        version: 52.13.1(react@18.3.1)
       '@crxjs/vite-plugin':
         specifier: 2.4.0
         version: 2.4.0(vite@8.0.14(yaml@2.9.0))
@@ -63,13 +63,8 @@ packages:
   '@atlaskit/adf-schema@24.0.3':
     resolution: {integrity: sha512-KXG71tu6oj1PxB8w5qrLP94sCayVea5i0bIAdBQ5BtHVSdj/FKDBfPkMBFU56uSuNh8tuu3LCLOTcv3KrxwR/w==}
 
-  '@atlaskit/adf-schema@52.13.0':
-    resolution: {integrity: sha512-U4hBXQGN+ixYVesAetjO1TWaqxxdCkfvCuhSZyJRUqVTMMP13t1ib4afQg1sPcgXPaVdnKYRKBFqEYbPQPEwXA==}
-
-  '@atlaskit/atlassian-context@0.2.0':
-    resolution: {integrity: sha512-msLRSp0qck6eflkShplgyIoOogNKxKRc6QIWGQlSvKGxHQNEbLEkRGcDzdh8PuBxSs1gda7OqYrdtQYQiPbpTQ==}
-    peerDependencies:
-      react: ^18.2.0
+  '@atlaskit/adf-schema@52.13.1':
+    resolution: {integrity: sha512-XRdvF2MAl8ddDMZxY/lOqdqYfQxTJQ+f9kxMBKOEMwAUEuureI66dlZP9aKDFHRnnUD61Ec4RMEqRF3VZr967w==}
 
   '@atlaskit/atlassian-context@0.9.0':
     resolution: {integrity: sha512-5oY2wMYEfXE3oVIdlqQB9HTZHAfp6+xgWuwyVU1dHOTb+VC2DW6nFaFxj6HKsusuZl8auMHlZOl8tiNO1/fYhA==}
@@ -95,9 +90,6 @@ packages:
 
   '@atlaskit/editor-tables@2.9.5':
     resolution: {integrity: sha512-KmY3esBDLzO/2OTdddrCm/3uEo0MDm9dLoNEmDA7VFdUYLCNSKAdecCc0JROyhx6Bmp43Dj1crYt+qtyex5VZg==}
-
-  '@atlaskit/feature-gate-js-client@5.3.1':
-    resolution: {integrity: sha512-2ZsxZ3r2+J22fT341JzR/vad1N95OK5hHybJC5iVQ961+x0q6pjRikaqOtRjGfcH6tOmV4br4wb14DeHH1YcbQ==}
 
   '@atlaskit/feature-gate-js-client@5.7.0':
     resolution: {integrity: sha512-scW/6+3zMGe+Sp8GYdctsJwk7edA0NNUsiQLBPcSADQMvEw9ASotTTYaovvnlUbVUGFlpiYL6MNI6PQkj0wXVQ==}
@@ -734,9 +726,6 @@ packages:
   estree-walker@3.0.3:
     resolution: {integrity: sha512-7RUKfXgSMMkzt6ZuXmqapOurLGPPfgj6l9uRZ7lRGolvk0y2yocc35LdcxKC5PQZdn2DMqioAQ2NoWcrTKmm6g==}
 
-  eventemitter2@4.1.2:
-    resolution: {integrity: sha512-erx0niBaTi8B7ywjGAcg8ilGNRl/xs/o4MO2ZMpRlpZ62mYzjGTBlOpxxRIrPQqBs9mbXkEux6aR+Sc5vQ/wUw==}
-
   eventemitter3@4.0.7:
     resolution: {integrity: sha512-8guHBZCwKnFhYdHr2ysuRWErTwhoN2X8XELRlrRwpmfeY2jjuUN4taQMsULKUVo1K4DvZl+0pgfyoysHxvmvEw==}
 
@@ -1127,9 +1116,6 @@ packages:
   prosemirror-model@1.24.1:
     resolution: {integrity: sha512-YM053N+vTThzlWJ/AtPtF1j0ebO36nvbmDy4U7qA2XQB8JVaQp1FmB9Jhrps8s+z+uxhhVTny4m20ptUvhk0Mg==}
 
-  prosemirror-model@1.25.1:
-    resolution: {integrity: sha512-AUvbm7qqmpZa5d9fPKMvH1Q5bqYQvAZWOGRvxsB6iFLyycvC9MwNemNVjHVrWgjaoxAfY8XVg7DbvQ/qxvI9Eg==}
-
   prosemirror-model@1.25.4:
     resolution: {integrity: sha512-PIM7E43PBxKce8OQeezAs9j4TP+5yDpZVbuurd1h5phUxEKIu+G2a+EUZzIC5nS1mJktDJWzbqS23n1tsAf5QA==}
 
@@ -1156,9 +1142,6 @@ packages:
 
   prosemirror-view@1.37.1:
     resolution: {integrity: sha512-MEAnjOdXU1InxEmhjgmEzQAikaS6lF3hD64MveTPpjOGNTl87iRLA1HupC/DEV6YuK7m4Q9DHFNTjwIVtqz5NA==}
-
-  prosemirror-view@1.39.3:
-    resolution: {integrity: sha512-bY/7kg0LzRE7ytR0zRdSMWX3sknEjw68l836ffLPMh0OG3OYnNuBDUSF3v0vjvnzgYjgY9ZH/RypbARURlcMFA==}
 
   prosemirror-view@1.41.5:
     resolution: {integrity: sha512-UDQbIPnDrjE8tqUBbPmCOZgtd75htE6W3r0JCmY9bL6W1iemDM37MZEKC49d+tdQ0v/CKx4gjxLoLsfkD2NiZA==}
@@ -1418,7 +1401,7 @@ snapshots:
     transitivePeerDependencies:
       - react
 
-  '@atlaskit/adf-schema@52.13.0(react@18.3.1)':
+  '@atlaskit/adf-schema@52.13.1(react@18.3.1)':
     dependencies:
       '@atlaskit/adf-schema-generator': 2.4.0
       '@atlaskit/editor-prosemirror': 7.3.0
@@ -1430,11 +1413,6 @@ snapshots:
       memoize-one: 6.0.0
     transitivePeerDependencies:
       - react
-
-  '@atlaskit/atlassian-context@0.2.0(react@18.3.1)':
-    dependencies:
-      '@babel/runtime': 7.27.3
-      react: 18.3.1
 
   '@atlaskit/atlassian-context@0.9.0(react@18.3.1)':
     dependencies:
@@ -1492,16 +1470,6 @@ snapshots:
     transitivePeerDependencies:
       - react
 
-  '@atlaskit/feature-gate-js-client@5.3.1(react@18.3.1)':
-    dependencies:
-      '@atlaskit/atlassian-context': 0.2.0(react@18.3.1)
-      '@babel/runtime': 7.27.3
-      '@statsig/client-core': 3.33.1
-      '@statsig/js-client': 3.33.1
-      eventemitter2: 4.1.2
-    transitivePeerDependencies:
-      - react
-
   '@atlaskit/feature-gate-js-client@5.7.0(react@18.3.1)':
     dependencies:
       '@atlaskit/atlassian-context': 0.9.0(react@18.3.1)
@@ -1545,7 +1513,7 @@ snapshots:
 
   '@atlaskit/tmp-editor-statsig@5.5.0(react@18.3.1)':
     dependencies:
-      '@atlaskit/feature-gate-js-client': 5.3.1(react@18.3.1)
+      '@atlaskit/feature-gate-js-client': 5.7.0(react@18.3.1)
       '@babel/runtime': 7.27.3
       react: 18.3.1
 
@@ -1850,11 +1818,11 @@ snapshots:
 
   '@types/prosemirror-model@1.17.0':
     dependencies:
-      prosemirror-model: 1.25.1
+      prosemirror-model: 1.25.4
 
   '@types/prosemirror-state@1.4.0':
     dependencies:
-      prosemirror-state: 1.4.3
+      prosemirror-state: 1.4.4
 
   '@types/unist@2.0.11': {}
 
@@ -1994,8 +1962,6 @@ snapshots:
   estree-walker@3.0.3:
     dependencies:
       '@types/estree': 1.0.7
-
-  eventemitter2@4.1.2: {}
 
   eventemitter3@4.0.7: {}
 
@@ -2545,19 +2511,15 @@ snapshots:
     dependencies:
       orderedmap: 2.1.1
 
-  prosemirror-model@1.25.1:
-    dependencies:
-      orderedmap: 2.1.1
-
   prosemirror-model@1.25.4:
     dependencies:
       orderedmap: 2.1.1
 
   prosemirror-state@1.4.3:
     dependencies:
-      prosemirror-model: 1.25.1
-      prosemirror-transform: 1.10.2
-      prosemirror-view: 1.39.3
+      prosemirror-model: 1.25.4
+      prosemirror-transform: 1.10.5
+      prosemirror-view: 1.41.5
 
   prosemirror-state@1.4.4:
     dependencies:
@@ -2567,7 +2529,7 @@ snapshots:
 
   prosemirror-transform@1.10.2:
     dependencies:
-      prosemirror-model: 1.25.1
+      prosemirror-model: 1.25.4
 
   prosemirror-transform@1.10.5:
     dependencies:
@@ -2575,7 +2537,7 @@ snapshots:
 
   prosemirror-transform@1.3.2:
     dependencies:
-      prosemirror-model: 1.25.1
+      prosemirror-model: 1.25.4
 
   prosemirror-utils@1.2.2(prosemirror-model@1.24.1)(prosemirror-state@1.4.3):
     dependencies:
@@ -2592,12 +2554,6 @@ snapshots:
       prosemirror-model: 1.25.4
       prosemirror-state: 1.4.4
       prosemirror-transform: 1.10.5
-
-  prosemirror-view@1.39.3:
-    dependencies:
-      prosemirror-model: 1.25.1
-      prosemirror-state: 1.4.3
-      prosemirror-transform: 1.10.2
 
   prosemirror-view@1.41.5:
     dependencies:
