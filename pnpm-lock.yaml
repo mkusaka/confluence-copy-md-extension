@@ -28,8 +28,8 @@ importers:
         version: 2.9.0
     devDependencies:
       '@atlaskit/adf-schema':
-        specifier: 52.15.0
-        version: 52.15.0(react@18.3.1)
+        specifier: 52.15.1
+        version: 52.15.1(react@18.3.1)
       '@crxjs/vite-plugin':
         specifier: 2.4.0
         version: 2.4.0(vite@8.0.14(yaml@2.9.0))
@@ -63,8 +63,8 @@ packages:
   '@atlaskit/adf-schema@24.0.3':
     resolution: {integrity: sha512-KXG71tu6oj1PxB8w5qrLP94sCayVea5i0bIAdBQ5BtHVSdj/FKDBfPkMBFU56uSuNh8tuu3LCLOTcv3KrxwR/w==}
 
-  '@atlaskit/adf-schema@52.15.0':
-    resolution: {integrity: sha512-8fcPL2C8hnINyg4Oph+RBGLQq5j+EUcM0BdFl/h+I09glQkI5t2LC0e3FGHPCM1TdU9VbKqkJ9McfdMDRd5iRQ==}
+  '@atlaskit/adf-schema@52.15.1':
+    resolution: {integrity: sha512-4is8U4+4nRcpG95oMWLKIASREwFs2iz5DsreA7jlFRcE99YvDBFG4/vZWtACUX8v6ROA8IxlY3xxR+toW7HPfA==}
 
   '@atlaskit/atlassian-context@0.9.0':
     resolution: {integrity: sha512-5oY2wMYEfXE3oVIdlqQB9HTZHAfp6+xgWuwyVU1dHOTb+VC2DW6nFaFxj6HKsusuZl8auMHlZOl8tiNO1/fYhA==}
@@ -1407,11 +1407,10 @@ snapshots:
     transitivePeerDependencies:
       - react
 
-  '@atlaskit/adf-schema@52.15.0(react@18.3.1)':
+  '@atlaskit/adf-schema@52.15.1(react@18.3.1)':
     dependencies:
       '@atlaskit/adf-schema-generator': 2.4.0
       '@atlaskit/editor-prosemirror': 7.3.0
-      '@atlaskit/platform-feature-flags': 1.1.1(react@18.3.1)
       '@atlaskit/tmp-editor-statsig': 84.4.0(react@18.3.1)
       '@babel/runtime': 7.27.3
       css-color-names: 0.0.4
