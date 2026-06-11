@@ -66,8 +66,8 @@ packages:
   '@atlaskit/adf-schema@52.16.1':
     resolution: {integrity: sha512-2ALB2sjolsznI5JgbmO9VDbsoD0kKSFGtL/1xbLbIeCR+zOdyOGVaa6OHl/l3dzcZ6IdCAS7dp06wNXw51WuLg==}
 
-  '@atlaskit/atlassian-context@0.9.0':
-    resolution: {integrity: sha512-5oY2wMYEfXE3oVIdlqQB9HTZHAfp6+xgWuwyVU1dHOTb+VC2DW6nFaFxj6HKsusuZl8auMHlZOl8tiNO1/fYhA==}
+  '@atlaskit/atlassian-context@0.10.0':
+    resolution: {integrity: sha512-4/cWFp+mxIYqPmcn3NSHf/JNL/8bRx0/+lpFTsc1C5nfjyyeuFG18pDQBtNn6kMDjGLAt06TSXEgwZV+P4zmGg==}
     peerDependencies:
       react: ^18.2.0 || ^19.0.0
 
@@ -85,11 +85,11 @@ packages:
   '@atlaskit/editor-prosemirror@7.3.0':
     resolution: {integrity: sha512-6KB4CuURZ+fU1DJMlmCox6q8T5ooVaCE+eZVrAlcODIfTyLu/wCvJfPJLOJUPZBvzCHqoWCebFmpu39uwUUleg==}
 
-  '@atlaskit/editor-tables@2.10.5':
-    resolution: {integrity: sha512-F5ho6OkBxsQlwUTh9+5ZKK+/uErN/974MwhYfOLrO8fVrGlWDmCE9qstwsMv6DFoOby+Mg+x+LjC4TJqxNabIg==}
+  '@atlaskit/editor-tables@2.10.9':
+    resolution: {integrity: sha512-oWOMEPonsARZVEkz2ff+cUJXsCmAZtkt+sjxeGB6hji+KC+oW9Fnm0LLBdEhabmUGev4LRtYlpuGLPxYWucKuQ==}
 
-  '@atlaskit/feature-gate-js-client@5.7.1':
-    resolution: {integrity: sha512-srKJmOSV0EeCuQ4atPs0Dsap5msJUabBLVMMhK9F5M2bMDpcgNXmL8a0h+LmCINyxevFhcIEjDhKoJnMkgRJ/w==}
+  '@atlaskit/feature-gate-js-client@5.7.2':
+    resolution: {integrity: sha512-82ItxZN7aVftw2AVV/JY8wU7Z4Zmmv4rquSEWNTzsjh3/5vjPi2Rfo6iCzRqJjpg/8eNQWOZ5Pq3oL9IPfz2vA==}
 
   '@atlaskit/interaction-context@3.1.0':
     resolution: {integrity: sha512-LB3T0ATpJ5y7/IVBndNbcjtaNmPcz/8k7+smMibzphmV7xB3HaIyJFEu2JoSmgps66qLXo0ia8Hj7v4dF9zJZw==}
@@ -99,18 +99,8 @@ packages:
   '@atlaskit/platform-feature-flags@1.1.3':
     resolution: {integrity: sha512-dRn6UvVmMF5+WXnv7ZlxKTV2rVQncI2TgM0KTGSqpHdD9LnogITWC/rFjzUuF/W8MBCEvpouGilukqhq6rASnw==}
 
-  '@atlaskit/react-ufo@6.4.4':
-    resolution: {integrity: sha512-wbSDqxgHS1ttnzpRSpTM1JZeK/SbdepV/XDkgZ3T3Rkwpbv71ApWpxz79IGQBRdA6DN3Ul7oontFKixrNFAWeA==}
-    peerDependencies:
-      react: ^18.2.0
-
-  '@atlaskit/react-ufo@6.6.0':
-    resolution: {integrity: sha512-wneHgLn8yeHXVMbn4ir3LSKdlAKgMFhunxL0EzCTKI2pyryXAia2t8rH1WsA13MGhqUPLqvxx79hXA6q5uQ1/g==}
-    peerDependencies:
-      react: ^18.2.0
-
-  '@atlaskit/tmp-editor-statsig@85.0.0':
-    resolution: {integrity: sha512-cTz3EsebB7NXAzGU/35kyyzsWm4MIgy7DVSkVm8NmjaONe8NBNFVm4weCDSfd7cMR6fEsgsMHIYdMMc2xKG7Ew==}
+  '@atlaskit/react-ufo@6.6.2':
+    resolution: {integrity: sha512-XfCV+d0k0mkluBVtfnIj9hFdNE6JGImQCqmCBezwudR9aakFJmUQltJ6DxO00eVSsnBrmJLUgbRXQb6hUHHFWw==}
     peerDependencies:
       react: ^18.2.0
 
@@ -1032,8 +1022,9 @@ packages:
   nth-check@2.1.1:
     resolution: {integrity: sha512-lqjrjmaOoAnWfMmBPL+XNnynZh2+swxiX3WUE0s4yEHI6m+AwrK2UZOimIRl3X/4QctVqS8AiZjFqyOGrMXb/w==}
 
-  obug@2.1.1:
-    resolution: {integrity: sha512-uTqF9MuPraAQ+IsnPf366RG4cP9RtUi7MLO1N3KEc+wb0a6yKpeL0lmk2IB1jY5KHPAlTc6T/JRdC/YqxHNwkQ==}
+  obug@2.1.2:
+    resolution: {integrity: sha512-AWGB9WFcRXOQs48Z/udjI5ZcZMHXwX8XPByNpOydgcGsDLIzjGizhoMWJyKAWze7AVW/2W1i+/gPX4YtKe5cyg==}
+    engines: {node: '>=12.20.0'}
 
   orderedmap@1.1.8:
     resolution: {integrity: sha512-eWEYOAggZZpZbJ9CTsqAKOTxlbBHdHZ8pzcfEvNTxGrjQ/m+Q25nSWUiMlT9MTbgpB6FOiBDKqsgJ2FlLDVNaw==}
@@ -1184,13 +1175,9 @@ packages:
   tinybench@2.9.0:
     resolution: {integrity: sha512-0+DUvqWMValLmha6lr4kD8iAMK1HzV0/aKnCtWb9v9641TnP/MFb7Pc2bxoxQjTXAErryXVgUOfv2YqNllqGeg==}
 
-  tinyexec@1.2.3:
-    resolution: {integrity: sha512-g62dB+w1/OEFnPvmX0yd/HnetYITOL+1nJW7kitOycOeAvmbWC/nu0fwmmQ/kupNojqExzyC/T++pST/jRJ2mQ==}
+  tinyexec@1.2.4:
+    resolution: {integrity: sha512-SHf/r48b7vOrjve9PxJo3MN5v5yuyjHvdUcrQffT3WXMUfnGmHDVbC4k3sHJaJTgZCwpUplIaAo5ANtMyp3YHg==}
     engines: {node: '>=18'}
-
-  tinyglobby@0.2.16:
-    resolution: {integrity: sha512-pn99VhoACYR8nFHhxqix+uvsbXineAasWm5ojXoN8xEwK5Kd3/TrhNn1wByuD52UxWRLy8pu+kRMniEi6Eq9Zg==}
-    engines: {node: '>=12.0.0'}
 
   tinyglobby@0.2.17:
     resolution: {integrity: sha512-wXR/dYpcqKmfWpEdZjiKJOwCNFndD0DMnrW/cYjVGttEkBfVgcLFHoNrlj47mjOVic9yyNu65alsgF4NQyTa2g==}
@@ -1370,7 +1357,7 @@ snapshots:
     dependencies:
       '@atlaskit/codemod-utils': 4.3.0
       '@atlaskit/editor-palette': 0.1.0
-      '@atlaskit/editor-tables': 2.10.5(react@18.3.1)
+      '@atlaskit/editor-tables': 2.10.9(react@18.3.1)
       '@babel/runtime': 7.29.7
       '@types/linkify-it': 2.1.0
       '@types/prosemirror-model': 1.17.0
@@ -1395,7 +1382,7 @@ snapshots:
     transitivePeerDependencies:
       - react
 
-  '@atlaskit/atlassian-context@0.9.0(react@18.3.1)':
+  '@atlaskit/atlassian-context@0.10.0(react@18.3.1)':
     dependencies:
       '@babel/runtime': 7.29.7
       react: 18.3.1
@@ -1427,18 +1414,18 @@ snapshots:
       prosemirror-utils: 1.2.2(prosemirror-model@1.25.4)(prosemirror-state@1.4.4)
       prosemirror-view: 1.41.5
 
-  '@atlaskit/editor-tables@2.10.5(react@18.3.1)':
+  '@atlaskit/editor-tables@2.10.9(react@18.3.1)':
     dependencies:
       '@atlaskit/editor-prosemirror': 7.3.0
       '@atlaskit/platform-feature-flags': 1.1.3(react@18.3.1)
-      '@atlaskit/tmp-editor-statsig': 85.0.0(react@18.3.1)
+      '@atlaskit/tmp-editor-statsig': 89.0.0(react@18.3.1)
       '@babel/runtime': 7.29.7
     transitivePeerDependencies:
       - react
 
-  '@atlaskit/feature-gate-js-client@5.7.1(react@18.3.1)':
+  '@atlaskit/feature-gate-js-client@5.7.2(react@18.3.1)':
     dependencies:
-      '@atlaskit/atlassian-context': 0.9.0(react@18.3.1)
+      '@atlaskit/atlassian-context': 0.10.0(react@18.3.1)
       '@babel/runtime': 7.29.7
       '@statsig/client-core': 3.33.2
       '@statsig/js-client': 3.33.2
@@ -1453,16 +1440,16 @@ snapshots:
 
   '@atlaskit/platform-feature-flags@1.1.3(react@18.3.1)':
     dependencies:
-      '@atlaskit/feature-gate-js-client': 5.7.1(react@18.3.1)
+      '@atlaskit/feature-gate-js-client': 5.7.2(react@18.3.1)
       '@babel/runtime': 7.29.7
     transitivePeerDependencies:
       - react
 
-  '@atlaskit/react-ufo@6.4.4(react@18.3.1)':
+  '@atlaskit/react-ufo@6.6.2(react@18.3.1)':
     dependencies:
-      '@atlaskit/atlassian-context': 0.9.0(react@18.3.1)
+      '@atlaskit/atlassian-context': 0.10.0(react@18.3.1)
       '@atlaskit/browser-apis': 0.0.2(react@18.3.1)
-      '@atlaskit/feature-gate-js-client': 5.7.1(react@18.3.1)
+      '@atlaskit/feature-gate-js-client': 5.7.2(react@18.3.1)
       '@atlaskit/interaction-context': 3.1.0(react@18.3.1)
       '@atlaskit/platform-feature-flags': 1.1.3(react@18.3.1)
       '@babel/runtime': 7.29.7
@@ -1472,35 +1459,12 @@ snapshots:
       react: 18.3.1
       scheduler: 0.23.2
       uuid: 3.4.0
-
-  '@atlaskit/react-ufo@6.6.0(react@18.3.1)':
-    dependencies:
-      '@atlaskit/atlassian-context': 0.9.0(react@18.3.1)
-      '@atlaskit/browser-apis': 0.0.2(react@18.3.1)
-      '@atlaskit/feature-gate-js-client': 5.7.1(react@18.3.1)
-      '@atlaskit/interaction-context': 3.1.0(react@18.3.1)
-      '@atlaskit/platform-feature-flags': 1.1.3(react@18.3.1)
-      '@babel/runtime': 7.29.7
-      '@opentelemetry/api': 1.9.1
-      bind-event-listener: 3.0.0
-      bowser-ultralight: 1.0.6
-      react: 18.3.1
-      scheduler: 0.23.2
-      uuid: 3.4.0
-
-  '@atlaskit/tmp-editor-statsig@85.0.0(react@18.3.1)':
-    dependencies:
-      '@atlaskit/feature-gate-js-client': 5.7.1(react@18.3.1)
-      '@atlaskit/platform-feature-flags': 1.1.3(react@18.3.1)
-      '@atlaskit/react-ufo': 6.4.4(react@18.3.1)
-      '@babel/runtime': 7.29.7
-      react: 18.3.1
 
   '@atlaskit/tmp-editor-statsig@89.0.0(react@18.3.1)':
     dependencies:
-      '@atlaskit/feature-gate-js-client': 5.7.1(react@18.3.1)
+      '@atlaskit/feature-gate-js-client': 5.7.2(react@18.3.1)
       '@atlaskit/platform-feature-flags': 1.1.3(react@18.3.1)
-      '@atlaskit/react-ufo': 6.6.0(react@18.3.1)
+      '@atlaskit/react-ufo': 6.6.2(react@18.3.1)
       '@babel/runtime': 7.29.7
       react: 18.3.1
 
@@ -1797,7 +1761,7 @@ snapshots:
 
   '@types/prosemirror-model@1.17.0':
     dependencies:
-      prosemirror-model: 1.25.4
+      prosemirror-model: 1.14.3
 
   '@types/prosemirror-state@1.4.0':
     dependencies:
@@ -2356,7 +2320,7 @@ snapshots:
     dependencies:
       boolbase: 1.0.0
 
-  obug@2.1.1: {}
+  obug@2.1.2: {}
 
   orderedmap@1.1.8: {}
 
@@ -2472,7 +2436,7 @@ snapshots:
 
   prosemirror-transform@1.3.2:
     dependencies:
-      prosemirror-model: 1.25.4
+      prosemirror-model: 1.14.3
 
   prosemirror-utils@1.2.2(prosemirror-model@1.25.4)(prosemirror-state@1.4.4):
     dependencies:
@@ -2552,12 +2516,7 @@ snapshots:
 
   tinybench@2.9.0: {}
 
-  tinyexec@1.2.3: {}
-
-  tinyglobby@0.2.16:
-    dependencies:
-      fdir: 6.5.0(picomatch@4.0.4)
-      picomatch: 4.0.4
+  tinyexec@1.2.4: {}
 
   tinyglobby@0.2.17:
     dependencies:
@@ -2652,13 +2611,13 @@ snapshots:
       es-module-lexer: 2.1.0
       expect-type: 1.3.0
       magic-string: 0.30.21
-      obug: 2.1.1
+      obug: 2.1.2
       pathe: 2.0.3
       picomatch: 4.0.4
       std-env: 4.1.0
       tinybench: 2.9.0
-      tinyexec: 1.2.3
-      tinyglobby: 0.2.16
+      tinyexec: 1.2.4
+      tinyglobby: 0.2.17
       tinyrainbow: 3.1.0
       vite: 8.0.16(yaml@2.9.0)
       why-is-node-running: 2.3.0
