@@ -21,7 +21,7 @@
     "yaml": "^2.9.0"
   },
   "devDependencies": {
-    "@atlaskit/adf-schema": "52.16.1",
+    "@atlaskit/adf-schema": "56.0.2",
     "@crxjs/vite-plugin": "2.4.0",
     "@types/chrome": "0.1.43",
     "@types/mdast": "4.0.4",
