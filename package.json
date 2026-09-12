@@ -21,14 +21,14 @@
     "yaml": "^2.9.0"
   },
   "devDependencies": {
-    "@atlaskit/adf-schema": "56.0.2",
-    "@crxjs/vite-plugin": "2.4.0",
-    "@types/chrome": "0.1.43",
+    "@atlaskit/adf-schema": "56.7.3",
+    "@crxjs/vite-plugin": "2.7.1",
+    "@types/chrome": "0.2.8",
     "@types/mdast": "4.0.4",
-    "oxfmt": "0.53.0",
-    "oxlint": "1.68.0",
+    "oxfmt": "0.66.0",
+    "oxlint": "1.81.0",
     "typescript": "7.0.2",
-    "vite": "8.0.16",
+    "vite": "8.2.2",
     "vitest": "5.0.0"
   },
   "packageManager": "pnpm@12.4.0"
